@@ -1,0 +1,15 @@
+[
+{
+  "modid": " firstmod",
+  "name": "First Mod",
+  "description": "My First Mod",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["JoshJ5Hawk"],
+  "credits": "JoshJ5Hawk",
+  "logoFile": "",
+  "screenshots": []
+}
+]
