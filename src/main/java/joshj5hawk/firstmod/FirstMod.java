@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = FirstMod.MODID, name = FirstMod.MODNAME, version = FirstMod.MODVERSION, dependencies = "required:pixelmon@[2.7.0]", useMetadata = true)
+@Mod(modid = FirstMod.MODID, name = FirstMod.MODNAME, version = FirstMod.MODVERSION, dependencies = "required-after:forge@[14.23.5.2768];required:pixelmon@[2.7.0]", useMetadata = true)
 public class FirstMod
 {
     public static final String MODID = "firstmod";
@@ -22,6 +22,14 @@ public class FirstMod
     @SidedProxy(clientSide = "joshj5hawk.firstmod.proxy.ClientProxy", serverSide = "joshj5hawk.firstmod.proxy.ServerProxy")
     public static CommonProxy proxy;
 
+    public static CreativeTabs tabFirstMod = new CreativeTabs("FirstMod")
+    {
+        @Override
+        public ItemStack getTabIconItem()
+        {
+            return new ItemStack(new ItemBlock(ModBlocks.poweredanvil));
+        }
+    };
 
     @Mod.Instance
     public static FirstMod instance;
@@ -46,14 +54,5 @@ public class FirstMod
     {
         proxy.postInit(event);
     }
-
-    public static CreativeTabs tabFirstMod = new CreativeTabs("FirstMod")
-    {
-        @Override
-        public ItemStack getTabIconItem()
-        {
-            return new ItemStack(new ItemBlock(ModBlocks.poweredAnvil));
-        }
-    };
 
 }

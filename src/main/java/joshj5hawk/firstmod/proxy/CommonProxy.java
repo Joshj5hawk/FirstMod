@@ -1,7 +1,6 @@
 package joshj5hawk.firstmod.proxy;
 
 import joshj5hawk.firstmod.FirstMod;
-import joshj5hawk.firstmod.ModBlocks;
 import joshj5hawk.firstmod.poweredAnvil.PoweredAnvil;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -41,6 +40,6 @@ public class CommonProxy
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
     {
-        event.getRegistry().register(new ItemBlock(ModBlocks.poweredAnvil).setRegistryName(new ResourceLocation(FirstMod.MODID, "poweredanvil")));
+        event.getRegistry().register(new ItemBlock(new PoweredAnvil()).setRegistryName(new ResourceLocation(FirstMod.MODID, "poweredanvil")));
     }
 }

@@ -1,13 +1,13 @@
 {
   "forge_marker": 1,
-  "defualts": {
-    "model": "block/cube_all",
+  "defaults": {
     "textures": {
       "all": "firstmod:blocks/poweredanvil"
-    }
+    },
+    "model": "cube_all",
+    "uvlock": true
   },
   "variants": {
-    "normal": [{}],
-    "inventory": [{}]
+    "normal": [{}]
   }
 }
